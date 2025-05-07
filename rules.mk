@@ -27,7 +27,7 @@ ifeq ($(strip $(NANOBOOT)), yes)
 endif
 
 # RGB Matrix boards
-ifeq ($(strip $(KEYBOARD)), $(filter $(KEYBOARD), crkbd/rev1 splitkb/aurora/sweep/rev1 1bastardkb/charybdis/3x5))
+ifeq ($(strip $(KEYBOARD)), $(filter $(KEYBOARD), crkbd/rev1 splitkb/aurora/sweep/rev1 bastardkb/charybdis/3x5))
     RGB_MATRIX_ENABLE = yes
 	SRC += rgb.c
 endif
