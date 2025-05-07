@@ -83,14 +83,16 @@ enum common_layers { BSE, CMK, SYM, NUM, FNC, PNT };
 #define ______________HOME_ROW_SCGA_R______________ XXXXXXX, KC_RALT, KC_RGUI, KC_RCTL, KC_RSFT
 #define ____________HOME_ROW_SCGA_R_ENT____________ XXXXXXX, KC_RALT, KC_RGUI, KC_RCTL, RSFT_T(KC_ENT)
 
-// BKB layer shorthands
-#define ESC_MED LT(MED, KC_ESC)
+// Layer shorthands
 #define SPC_NAV LT(NAV, KC_SPC)
 #define TAB_FUN LT(FNC, KC_TAB)
 #define ENT_SYM LT(SYM, KC_ENT)
 #define BSP_NUM LT(NUM, KC_BSPC)
-#define _L_MED(KC) LT(MED, KC)
 #define _L_PTR(KC) LT(PNT, KC)
+#ifdef BKB_LAYOUT
+  #define ESC_MED LT(MED, KC_ESC)
+  #define _L_MED(KC) LT(MED, KC)
+#endif
 
 // clang-format off
 // Default 3x5_2 split layout
