@@ -20,8 +20,8 @@ COMBO_ENABLE = yes
 
 INTROSPECTION_KEYMAP_C = p4p3r.c
 
-# NanoBoot boards
-ifeq ($(strip $(KEYBOARD)), $(filter $(KEYBOARD), crkbd/rev1 splitkb/kyria/rev1))
+# NanoBoot firmware
+ifeq ($(strip $(NANOBOOT)), yes)
 	BOOTLOADER = qmk-hid
 	BOOTLOADER_SIZE = 512
 endif
